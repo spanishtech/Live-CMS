@@ -10,6 +10,10 @@
  */
 // Require the main.php which will include all the libraries and other files needed.
 // DO NOT USE MAIN.PHP IF YOU ARE MAKING A PLUGIN. PLEASE USE API.PHP.
+if(file_exists("inc/config.php.tmp")||!file_exists("inc/config.php"))
+{
+    echo "Please install <a href='install/index.php'>here</a>";
+}
 require_once("inc/main.php");
 $hookManager->triggerHook("pre_header");
 // SQL to retrieve the current theme based on the setting found in the settings table.
