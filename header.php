@@ -9,7 +9,9 @@
  * START: Includes and setup
  */
 // Require the main.php which will include all the libraries and other files needed.
+// DO NOT USE MAIN.PHP IF YOU ARE MAKING A PLUGIN. PLEASE USE API.PHP.
 require_once("inc/main.php");
+$hookManager->triggerHook("pre_header");
 // SQL to retrieve the current theme based on the setting found in the settings table.
 $theme=$sql->firstResult($sql->query("SELECT `setting_value` FROM `settings` WHERE `setting_name`='{0}'",array("current_theme")));
 // make sure no one is doing anything sneaky by removing "../" and any variations from the string.
@@ -41,3 +43,5 @@ while($row = $result->fetch_assoc()) {
 // The hook manager will return the modified $templateReplacementArray.
 $templateReplacementArray=$hookManager->triggerHook("template_variables",array($templateReplacementArray));
 echo $twig->render('header.html', $templateReplacementArray);
+
+$hookManager->triggerHook("post_header");
