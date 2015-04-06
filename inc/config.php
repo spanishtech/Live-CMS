@@ -6,3 +6,15 @@
  * Time: 6:22 PM
  */
 // TODO: Put config in here
+const CFG = 
+[
+  "SITE" =>
+  [
+    "BLAH",
+    "META" => [
+      "ATR",
+      "ATR",
+      "ATR"
+    ]
+  ]
+]
