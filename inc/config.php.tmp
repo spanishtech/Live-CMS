@@ -6,3 +6,18 @@
  * Time: 6:22 PM
  */
 // TODO: Put config in here
+
+<?php
+
+return [
+  
+  // The URL of the site
+	'url' => 'http://localhost',
+  
+  // MySQL Databas Connection Details
+  'db_host' => '',
+  'db_name' => '',
+  'db_user' => '',
+  'db_pass' => '',
+  
+];
