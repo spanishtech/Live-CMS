@@ -17,4 +17,11 @@ const CFG =
       "ATR"
     ]
   ]
+  "DB" =>
+  [
+    "USER",
+    "PASSWORD",
+    "HOST"
+    "DB"
+  ]
 ]
